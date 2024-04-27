@@ -1,0 +1,154 @@
+#experience {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+
+        span {
+            color: var(--color-primary);
+        }
+    }
+}
+
+.exp-text-div {
+    small {
+        background: #434343;
+        padding: 0.1rem 0.5rem;
+        border-radius: 5rem;
+    }
+
+    h3 {
+        margin: 8px 0;
+    }
+}
+
+
+.exp-item-container {
+    display: flex;
+    justify-content: space-between;
+
+    .exp-item {
+        position: relative;
+        display: flex;
+        padding-left: 3rem;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 40%;
+        border-left: 1px solid #434343;
+    }
+}
+
+
+.skill-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        padding: 5rem;
+        /* margin-bottom: 5rem; */
+    }
+
+    ul {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 5rem;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            svg {
+                font-size: 8rem;
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+.exp-icon {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background-color: var(--color-primary);
+    border-radius: 5rem;
+    display: flex;
+
+
+    svg {
+        font-size: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    #experience {
+        width: var(--container-width-md);
+    }
+
+    .exp-item-container {
+        gap: 1rem;
+
+        .exp-item {
+            padding-left: 2rem;
+            width: 100%;
+        }
+    }
+
+    .skill-container {
+        h3 {
+            padding: 2rem;
+        }
+
+        ul {
+            li {
+                p {
+                    font-size: 1.2rem;
+                }
+
+                svg {
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #experience {
+        width: var(--container-width-sm);
+    }
+
+    .exp-item-container {
+        flex-direction: column;
+    }
+
+    .exp-icon {
+        padding: 0.3rem;
+
+        svg {
+            font-size: 1.2rem;
+        }
+    }
+
+    .skill-container {
+        ul {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
